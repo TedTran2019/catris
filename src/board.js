@@ -46,6 +46,10 @@ export default class Board {
     ctx.fillRect(x, y, this.blockSize, this.blockSize);
   }
 
+  // drawTile(ctx, x, y, tile) {
+  //   ctx.drawImage(tile, x, y, this.blockSize, this.blockSize);
+  // }
+
   drawEmpty(ctx, x, y) {
     ctx.strokeStyle = 'green';
     ctx.strokeRect(x, y, this.blockSize, this.blockSize);

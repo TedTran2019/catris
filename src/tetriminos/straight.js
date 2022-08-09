@@ -9,7 +9,7 @@ export default class Straight extends Tetrimino {
       [0, 0, 0, 0],
       [0, 0, 0, 0],
     ];
-    this.color = '#3399ff';
+    this.color = 'teal';
     this.y = 19;
   }
 
