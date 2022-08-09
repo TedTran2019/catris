@@ -8,6 +8,17 @@ export default class Board {
     this.cols = cols;
     this.blockSize = blockSize;
     this.grid = this.createGrid();
+    const colors = ['blue', 'green', 'orange', 'purple', 'red', 'teal', 'yellow'];
+    this.images = this.createImages(colors);
+  }
+
+  createImages(colors) {
+    const images = {};
+    colors.forEach(color => {
+      images[color] = new Image();
+      images[color].src = `../src/images/catblock-${color}.png`;
+    });
+    return images;
   }
 
   createGrid() {
@@ -42,8 +53,9 @@ export default class Board {
 
   drawTile(ctx, x, y, tile) {
     // tile.draw(ctx);
-    ctx.fillStyle = tile;
-    ctx.fillRect(x, y, this.blockSize, this.blockSize);
+    // ctx.fillStyle = tile;
+    // ctx.fillRect(x, y, this.blockSize, this.blockSize);
+    ctx.drawImage(this.images[tile], x, y, this.blockSize, this.blockSize);
   }
 
   // drawTile(ctx, x, y, tile) {
@@ -51,7 +63,7 @@ export default class Board {
   // }
 
   drawEmpty(ctx, x, y) {
-    ctx.strokeStyle = 'green';
+    ctx.strokeStyle = '#374049';
     ctx.strokeRect(x, y, this.blockSize, this.blockSize);
   }
 

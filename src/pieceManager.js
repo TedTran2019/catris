@@ -109,22 +109,22 @@ export default class PieceManager {
   // Fix magic numbers later
   drawNextContainer(ctx) {
     ctx.clearRect(0, 0, 180, 675);
-    for (let y = 0; y < 15; y++) {
-      for (let x = 0; x < 4; x++) {
-        ctx.strokeStyle = 'green';
-        ctx.strokeRect(x * 45, y * 45, 45, 45);
-      }
-    }
+    // for (let y = 0; y < 15; y++) {
+    //   for (let x = 0; x < 4; x++) {
+    //     ctx.strokeStyle = '#374049';
+    //     ctx.strokeRect(x * 45, y * 45, 45, 45);
+    //   }
+    // }
   }
 
   drawHoldContainer(ctx) {
     ctx.clearRect(0, 0, 180, 180);
-    for (let y = 0; y < 4; y++) {
-      for (let x = 0; x < 4; x++) {
-        ctx.strokeStyle = 'green';
-        ctx.strokeRect(x * 45, y * 45, 45, 45);
-      }
-    }
+    // for (let y = 0; y < 4; y++) {
+    //   for (let x = 0; x < 4; x++) {
+    //     ctx.strokeStyle = '#374049';
+    //     ctx.strokeRect(x * 45, y * 45, 45, 45);
+    //   }
+    // }
   }
 
   // drawHoldContainer(ctx) {

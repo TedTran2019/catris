@@ -44,9 +44,10 @@ export default class Tetrimino {
     this.shape.forEach((row, y) => {
       row.forEach((block, x) => {
         if (block) {
-          ctx.fillStyle = this.color;
           let multiplier = pos * 5
-          ctx.fillRect(x * sideSize,  (y + multiplier) * sideSize, sideSize, sideSize);
+          // ctx.fillStyle = this.color;
+          // ctx.fillRect(x * sideSize,  (y + multiplier) * sideSize, sideSize, sideSize);
+          ctx.drawImage(this.image, x * sideSize, (y + multiplier) * sideSize, sideSize, sideSize);
         }
       });
     });
