@@ -1,5 +1,6 @@
 #game-canvas {
-  background-color: black;
+  background-image: url('../images/background.png');
+  background-size: 450px 900px;
 }
 
 .game-canvas-container {
