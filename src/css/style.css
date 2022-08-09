@@ -195,7 +195,8 @@ body {
 
 html {
   background-image: url('../images/cat_pattern.png');
-  animation: blinkingBackground 3s infinite;
+  animation: blinkingBackground 20s infinite;
+  font-family: 'Mouse Memoirs', sans-serif;
 }
 
 @keyframes blinkingBackground {
@@ -258,4 +259,8 @@ html {
     color: rgb(255, 127, 0);
     background-color: rgb(255, 0, 127);
   }
+}
+
+.hold > h1, .right-sidebar > h1 {
+  background-color: black;
 }
