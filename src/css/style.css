@@ -62,10 +62,6 @@
   margin: 0 auto;
 }
 
-html {
-  background-color: #DBF9FC
-}
-
 h1 {
   font-size: 2em;
   text-align: center;
@@ -194,5 +190,72 @@ body {
 
   100% {
     background-position: 0 0;
+  }
+}
+
+html {
+  background-image: url('../images/cat_pattern.png');
+  animation: blinkingBackground 3s infinite;
+}
+
+@keyframes blinkingBackground {
+  100%, 0% {
+  color: rgb(255, 0, 0);
+  background-color: rgb(255, 0, 0);
+  }
+
+  8% {
+    color: rgb(255, 0, 127);
+    background-color: rgb(255, 127, 0);
+  }
+
+  16% {
+    color: rgb(255, 0, 255);
+    background-color: rgb(255, 255, 0);
+  }
+
+  25% {
+    color: rgb(127, 0, 255);
+    background-color: rgb(127, 255, 0);
+  }
+
+  33% {
+    color: rgb(0, 0, 255);
+    background-color: rgb(0, 255, 0);
+  }
+
+  41% {
+    color: rgb(0, 127, 255);
+    background-color: rgb(0, 255, 127);
+  }
+
+  50% {
+    color: rgb(0, 127, 255);
+    background-color: rgb(0, 255, 255);
+  }
+
+  58% {
+    color: rgb(0, 255, 255);
+    background-color: rgb(0, 127, 255);
+  }
+
+  66% {
+    color: rgb(127, 0, 255);
+    background-color: rgb(0, 0, 255);
+  }
+
+  75% {
+    color: rgb(255, 0, 255);
+    background-color: rgb(127, 0, 255);
+  }
+
+  83% {
+    color: rgb(255, 0, 127);
+    background-color: rgb(255, 0, 255);
+  }
+
+  91% {
+    color: rgb(255, 127, 0);
+    background-color: rgb(255, 0, 127);
   }
 }
