@@ -10,6 +10,7 @@ export default class Straight extends Tetrimino {
       [0, 0, 0, 0],
     ];
     this.color = 'teal';
+    this.image.src = '../src/images/catblock-teal.png';
     this.y = 19;
   }
 

@@ -7,6 +7,8 @@ export default class Tetrimino {
     this.board = board;
     this.x = 3;
     this.y = 20;
+    this.image = new Image();
+    this.image.src = '';
   }
 
   drop() {
@@ -29,8 +31,9 @@ export default class Tetrimino {
     this.shape.forEach((row, y) => {
       row.forEach((block, x) => {
         if (block) {
-          ctx.fillStyle = this.color;
-          ctx.fillRect((this.x + x) * Game.BLOCK_SIZE, (this.y + y - 20) * Game.BLOCK_SIZE, Game.BLOCK_SIZE, Game.BLOCK_SIZE);
+          // ctx.fillStyle = this.color;
+          // ctx.fillRect((this.x + x) * Game.BLOCK_SIZE, (this.y + y - 20) * Game.BLOCK_SIZE, Game.BLOCK_SIZE, Game.BLOCK_SIZE);
+          ctx.drawImage(this.image, (this.x + x) * Game.BLOCK_SIZE, (this.y + y - 20) * Game.BLOCK_SIZE, Game.BLOCK_SIZE, Game.BLOCK_SIZE);
         }
       });
     });
