@@ -1,7 +1,7 @@
 import Game from './game.js';
 
 export default class GameView {
-  constructor(game, ctx, holdCtx, nextCtx, bgm) {
+  constructor(game, ctx, holdCtx, nextCtx, bgm, customEvents) {
     this.game = game;
     this.ctx = ctx;
     this.holdCtx = holdCtx;
@@ -15,10 +15,23 @@ export default class GameView {
     document.querySelector('#restart').addEventListener('click', () => {
       this.restart();
     })
+    this.sounds = this.setupSoundEffects();
+    this.customEvents = customEvents;
+  }
+
+  setupSoundEffects() {
+    const sounds = {
+      gameOver: new Audio('../src/sound/game-over.m4a'),
+      lineClear: new Audio('../src/sound/line-clear.m4a'),
+      cantRotate: new Audio('../src/sound/cant-rotate.m4a'),
+      placeBlock: new Audio('../src/sound/place-block.m4a'),
+      rotate: new Audio('../src/sound/rotate.m4a')
+    }
+    return sounds;
   }
   
   restart() {
-    this.game = new Game();
+    this.game = new Game(this.customEvents);
     this.isGameOver = false;
     this.gameOverFunc();
     this.bgm.play();
@@ -28,7 +41,31 @@ export default class GameView {
   start() {
     this.bindKeyHandlers();
     this.repeatMusic();
+    this.soundEffects();
     this.animate();
+  }
+
+  soundEffects() {
+    window.addEventListener('gameOver', () => {
+      this.sounds.gameOver.currentTime = 0;
+      this.sounds.gameOver.play();
+    })
+    window.addEventListener('lineClear', () => {
+      this.sounds.lineClear.currentTime = 0;
+      this.sounds.lineClear.play();
+    })
+    window.addEventListener('cantRotate', () => {
+      this.sounds.cantRotate.currentTime = 0;
+      this.sounds.cantRotate.play();
+    })
+    window.addEventListener('placeBlock', () => {
+      this.sounds.placeBlock.currentTime = 0;
+      this.sounds.placeBlock.play();
+    })
+    window.addEventListener('rotate', () => {
+      this.sounds.rotate.currentTime = 0;
+      this.sounds.rotate.play();
+    })
   }
 
   repeatMusic() {

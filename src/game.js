@@ -2,7 +2,7 @@ import Board from './board';
 import PieceManager from './pieceManager';
 
 export default class Game {
-  constructor() {
+  constructor(customEvents) {
     this.rows = Game.ROWS;
     this.cols = Game.COLS;
     this.dimX = Game.DIM_X;
@@ -17,13 +17,18 @@ export default class Game {
     this.levelHolder = document.querySelector('.level-number');
     this.linesHolder = document.querySelector('.lines-number');
     this.showScore();
-    this.customEvents = "";
+    this.customEvents = customEvents;
   }
 
   step() {
     let isGameOver = this.pieceManager.move();
-    if (isGameOver) {return true };
-    this.calculateScore(this.board.clearRows());
+    if (isGameOver) {
+      window.dispatchEvent(this.customEvents.gameOver);
+      return true 
+    };
+    let lines = this.board.clearRows();
+    this.calculateScore(lines);
+    if (lines > 0) { window.dispatchEvent(this.customEvents.lineClear) };
     return false;
   }
 
