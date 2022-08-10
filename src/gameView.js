@@ -21,11 +21,11 @@ export default class GameView {
 
   setupSoundEffects() {
     const sounds = {
-      gameOver: new Audio('../src/sound/game-over.m4a'),
-      lineClear: new Audio('../src/sound/line-clear.m4a'),
-      cantRotate: new Audio('../src/sound/cant-rotate.m4a'),
-      placeBlock: new Audio('../src/sound/place-block.m4a'),
-      rotate: new Audio('../src/sound/rotate.m4a')
+      gameOver: new Audio('./src/sound/game-over.m4a'),
+      lineClear: new Audio('./src/sound/line-clear.m4a'),
+      cantRotate: new Audio('./src/sound/cant-rotate.m4a'),
+      placeBlock: new Audio('./src/sound/place-block.m4a'),
+      rotate: new Audio('./src/sound/rotate.m4a')
     }
     sounds.rotate.volume = 0.15;
     return sounds;

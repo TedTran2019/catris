@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', event => {
   const nextCtx = nextCanvas.getContext('2d');
   const bgm = document.createElement('audio');
   const customEvents = createCustomEvents();
-  bgm.setAttribute('src', '../src/sound/catris.m4a');
+  bgm.setAttribute('src', './src/sound/catris.m4a');
   bgm.volume = .8;
   bgm.playbackRate = 1.5;
   const game = new Game(customEvents);

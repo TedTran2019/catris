@@ -46,7 +46,7 @@ export default class Game {
     this.score += Game.LINE_SCORE[lines - 1] * (this.level + 1);
     this.lines += lines;
     this.level = Math.floor(this.lines / 10);
-    this.dropRate = 60 - (this.level * 2);
+    this.dropRate = 60 - (this.level * 5);
     this.showScore();
   }
 
