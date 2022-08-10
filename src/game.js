@@ -3,20 +3,21 @@ import PieceManager from './pieceManager';
 
 export default class Game {
   constructor() {
-   this.rows = Game.ROWS;
-   this.cols = Game.COLS;
-   this.dimX = Game.DIM_X;
-   this.dimY = Game.DIM_Y;
-   this.blockSize = Game.BLOCK_SIZE;
-   this.board = new Board(this.cols, this.rows, this.blockSize);
-   this.pieceManager = new PieceManager(this.board);
-   this.score = 0;
-   this.level = 0;
-   this.lines = 0;
-  this.scoreHolders = document.getElementsByClassName('score-number');
-  this.levelHolder = document.querySelector('.level-number');
-  this.linesHolder = document.querySelector('.lines-number');
-  this.showScore();
+    this.rows = Game.ROWS;
+    this.cols = Game.COLS;
+    this.dimX = Game.DIM_X;
+    this.dimY = Game.DIM_Y;
+    this.blockSize = Game.BLOCK_SIZE;
+    this.board = new Board(this.cols, this.rows, this.blockSize);
+    this.pieceManager = new PieceManager(this.board);
+    this.score = 0;
+    this.level = 0;
+    this.lines = 0;
+    this.scoreHolders = document.getElementsByClassName('score-number');
+    this.levelHolder = document.querySelector('.level-number');
+    this.linesHolder = document.querySelector('.lines-number');
+    this.showScore();
+    this.customEvents = "";
   }
 
   step() {
