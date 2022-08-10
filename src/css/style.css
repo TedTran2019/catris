@@ -201,8 +201,9 @@ body {
 }
 
 html {
-  background-image: url('../images/cat_pattern_transparent.png');
-  animation: blinkingBackground 20s infinite;
+  background-image: url('../images/cat-bg-2.png');
+  background-size: 33.3%;
+  animation: blinkingBackground 5s infinite;
   font-family: 'Dongle', sans-serif;
   color: #fef1f6;
   font-size: 20px;
