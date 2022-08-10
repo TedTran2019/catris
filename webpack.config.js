@@ -16,7 +16,7 @@ module.exports = {
       metaDesc: 'Tetris with cats!',
       template: path.resolve(__dirname, "./src/index.html"),
       filename: 'index.html',
-      inject: 'body'
+      inject: 'body',
     })
   ],
   mode: 'development',
