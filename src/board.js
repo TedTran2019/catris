@@ -78,8 +78,10 @@ export default class Board {
   // }
 
   drawEmpty(ctx, x, y) {
-    ctx.strokeStyle = '#374049';
+    ctx.strokeStyle = "#633ecc";
+    ctx.globalAlpha = 0.5;
     ctx.strokeRect(x, y, this.blockSize, this.blockSize);
+    ctx.globalAlpha = 1;
   }
 
   isInBounds(x, y) {
