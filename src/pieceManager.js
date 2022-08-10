@@ -58,7 +58,7 @@ export default class PieceManager {
     }
   }
 
-  move() {
+  move(customEvents) {
     if (this.dropCount === 60 || this.hardDrop) {
       if (this.hardDrop) {
         this.current.y = this.lookAhead;
@@ -66,6 +66,7 @@ export default class PieceManager {
       }
       let tetriminoPlaced = this.current.drop();
       if (tetriminoPlaced) {
+        window.dispatchEvent(customEvents.placeBlock);
         this.createPiece();
         this.holdCount = 0;
         if (this.current === null) {
@@ -167,12 +168,22 @@ export default class PieceManager {
     this.current.softDrop();
   }
 
-  rotateRight() {
-    this.current.rotateRight();
+  rotateRight(customEvents) {
+    const rotated = this.current.rotateRight();
+    if (rotated) {
+      window.dispatchEvent(customEvents.rotate);
+    } else {
+      window.dispatchEvent(customEvents.cantRotate);
+    }
   }
 
-  rotateLeft() {
-    this.current.rotateLeft();
+  rotateLeft(customEvents) {
+    const rotated = this.current.rotateLeft();
+    if (rotated) {
+      window.dispatchEvent(customEvents.rotate);
+    } else {
+      window.dispatchEvent(customEvents.cantRotate);
+    }
   }
 
   // This locks!

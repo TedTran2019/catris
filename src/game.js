@@ -21,7 +21,7 @@ export default class Game {
   }
 
   step() {
-    let isGameOver = this.pieceManager.move();
+    let isGameOver = this.pieceManager.move(this.customEvents);
     if (isGameOver) {
       window.dispatchEvent(this.customEvents.gameOver);
       return true 

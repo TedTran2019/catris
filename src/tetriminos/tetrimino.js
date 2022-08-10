@@ -112,8 +112,10 @@ export default class Tetrimino {
       let wallKickFailed = this.wallKick();
       if (wallKickFailed) {
         this.shape = oldShape;
+        return false;
       }
     }
+    return true;
   }
 
   rotateLeft() {
@@ -125,8 +127,10 @@ export default class Tetrimino {
       if (wallKickFailed) {
         this.shape = oldShape;
         this.shape.map(row => row.reverse());
+        return false;
       }
     }
+    return true;
   }
 
   transpose(matrix) {

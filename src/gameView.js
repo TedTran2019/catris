@@ -96,7 +96,7 @@ export default class GameView {
         case 'ArrowUp':
         case 'KeyX':
         case 'KeyW':
-          this.game.pieceManager.rotateRight();
+          this.game.pieceManager.rotateRight(this.customEvents);
           break;
         case 'Space':
           this.game.pieceManager.hardDropIt();
@@ -109,7 +109,7 @@ export default class GameView {
         case 'ControlLeft':
         case 'ControlRight':
         case 'KeyZ':
-          this.game.pieceManager.rotateLeft();
+          this.game.pieceManager.rotateLeft(this.customEvents);
           break;
         case 'F1':
         case 'KeyP':

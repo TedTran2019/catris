@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', event => {
   const bgm = document.createElement('audio');
   const customEvents = createCustomEvents();
   bgm.setAttribute('src', '../src/sound/catris.m4a');
-  // bgm.volume = .5;
+  bgm.volume = .8;
   bgm.playbackRate = 1.5;
   const game = new Game(customEvents);
   const gv = new GameView(game, ctx, holdCtx, nextCtx, bgm, customEvents);
