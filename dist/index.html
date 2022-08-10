@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tetris</title>
+    <script src="./main.js"></script>
+    <link rel="stylesheet" href="../src/css/reset.css">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="play-holder">
+      <button id="play" class="glow-on-hover">Click here to play!</buttonid>
+    </div>
+    <h1 class="tetris-title"><img src="../src/images/catris.png" alt="tetris-logo"></h1>
+    <div class="canvases">
+      <div class="left-sidebar">
+        <div class="hold">
+          <h1>HOLDMEOW</h1>
+          <canvas id="hold-canvas" width="180" height="180"></canvas>
+        </div>
+        <div class="score">
+          <h1>SCOREMEOW</h1>
+            <span class="score-number">0</span>
+          <h1>LEVELMEOW</h1>
+            <span class="level-number">0</span>
+          <h1>LINESMEOW</h1>
+            <span class="lines-number">0</span>
+        </div>
+        <div class="controls">
+          <h1>CONTROLSMEOW</h1>
+          <ul>
+            <li>Move Right: [&#8594;] [D]</li>
+            <li>Move Left: [&#8592;] [A]</li>
+            <li>Move Down: [&#8595;] [S]</li>
+            <li>Rotate Right: [&#8593;] [X] [W]</li>
+            <li>Rotate Left: [Z] [CTRL]</li>
+            <li>Hold: [C] [SHIFT]</li>
+            <li>Hard Drop: [SPACE]</li>
+            <li>Pause: [P] [F1]</li>
+            <li>Quit Game: [ESC]</li>
+          </ul>
+        </div>
+      </div>
+      <div class="game-canvas-container">
+        <canvas id="game-canvas" width="450" height="900"></canvas>
+      </div>
+      <div class="right-sidebar">
+        <h1>NEXTMEOW</h1>
+        <canvas id="next-canvas" width="180" height="675"></canvas>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal-content">
+        <div class="game-over">
+          <h1>Game Over</h1>
+          <p>Your score: <span id="score" class="score-number">0</span></p>
+          <button id="restart" class="button">Restart</button>
+        </div>
+        <div class="pause">
+          Paused!
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

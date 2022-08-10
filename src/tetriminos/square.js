@@ -8,7 +8,7 @@ export default class Square extends Tetrimino {
       [1, 1],
     ];
     this.color = 'yellow';
-    this.image.src = './src/images/catblock-yellow.png';
+    this.image.src = '../src/images/catblock-yellow.png';
     this.x = 4;
   }
 
