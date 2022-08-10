@@ -70,6 +70,7 @@
 h1 {
   font-size: 2em;
   text-align: center;
+  font-weight: 700;
 }
 
 .left-sidebar {
@@ -201,7 +202,9 @@ body {
 html {
   background-image: url('../images/cat_pattern_transparent.png');
   animation: blinkingBackground 20s infinite;
-  font-family: 'Mouse Memoirs', sans-serif;
+  font-family: 'Dongle', sans-serif;
+  color: #fef1f6;
+  font-size: 20px;
 }
 
 @keyframes blinkingBackground {
