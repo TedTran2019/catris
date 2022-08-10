@@ -119,7 +119,6 @@ export default class GameView {
           break;
         case 'F1':
         case 'KeyP':
-          debugger
           this.togglePause();
           break;
         case 'Escape':
