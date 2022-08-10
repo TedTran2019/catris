@@ -277,3 +277,12 @@ html {
 span, .controls > ul {
   color: white;
 }
+
+.tetris-title {
+  background: url('../images/catris.png');
+  width: 250px;
+  height: 100px;
+  background-size: 250px;
+  background-repeat: no-repeat;
+  background-position: center;
+}

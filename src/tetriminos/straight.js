@@ -1,4 +1,5 @@
 import Tetrimino from './tetrimino';
+import CatBlockTeal from '../images/catblock-teal.png';
 
 export default class Straight extends Tetrimino {
   constructor(board) {
@@ -10,7 +11,7 @@ export default class Straight extends Tetrimino {
       [0, 0, 0, 0],
     ];
     this.color = 'teal';
-    this.image.src = './images/catblock-teal.png';
+    this.image.src = CatBlockTeal;
     this.y = 19;
   }
 

@@ -1,4 +1,5 @@
 import Tetrimino from './tetrimino';
+import CatBlockRed from '../images/catblock-red.png';
 
 export default class Z extends Tetrimino {
   constructor(board) {
@@ -9,6 +10,6 @@ export default class Z extends Tetrimino {
       [0, 0, 0],
     ];
     this.color = 'red';
-    this.image.src = './images/catblock-red.png';
+    this.image.src = CatBlockRed;
   }
 }

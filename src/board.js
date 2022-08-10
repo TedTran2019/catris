@@ -2,6 +2,14 @@
 // The game only renders from 20 and beyond
 // Draw from 20 to 40, x - 20 * blocksize
 // Let rest be abstracted away
+import CatBlockRed from './images/catblock-red.png';
+import CatBlockBlue from './images/catblock-blue.png';
+import CatBlockGreen from './images/catblock-green.png';
+import CatBlockOrange from './images/catblock-orange.png';
+import CatBlockPurple from './images/catblock-purple.png';
+import CatBlockTeal from './images/catblock-teal.png';
+import CatBlockYellow from './images/catblock-yellow.png';
+
 export default class Board {
   constructor(cols, rows, blockSize) {
     this.rows = rows;
@@ -16,8 +24,15 @@ export default class Board {
     const images = {};
     colors.forEach(color => {
       images[color] = new Image();
-      images[color].src = `./images/catblock-${color}.png`;
+      // images[color].src = `./images/catblock-${color}.png`;
     });
+    images['blue'].src = CatBlockBlue;
+    images['green'].src = CatBlockGreen;
+    images['orange'].src = CatBlockOrange;
+    images['purple'].src = CatBlockPurple;
+    images['red'].src = CatBlockRed;
+    images['teal'].src = CatBlockTeal;
+    images['yellow'].src = CatBlockYellow;
     return images;
   }
 

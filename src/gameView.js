@@ -1,4 +1,9 @@
 import Game from './game.js';
+import GameOverSound from './sound/game-over.m4a';
+import LineClearSound from './sound/line-clear.m4a';
+import CantRotateSound from './sound/cant-rotate.m4a';
+import PlaceBlockSound from './sound/place-block.m4a';
+import RotateSound from './sound/rotate.m4a';
 
 export default class GameView {
   constructor(game, ctx, holdCtx, nextCtx, bgm, customEvents) {
@@ -21,11 +26,11 @@ export default class GameView {
 
   setupSoundEffects() {
     const sounds = {
-      gameOver: new Audio('./sound/game-over.m4a'),
-      lineClear: new Audio('./sound/line-clear.m4a'),
-      cantRotate: new Audio('./sound/cant-rotate.m4a'),
-      placeBlock: new Audio('./sound/place-block.m4a'),
-      rotate: new Audio('./sound/rotate.m4a')
+      gameOver: new Audio(GameOverSound),
+      lineClear: new Audio(LineClearSound),
+      cantRotate: new Audio(CantRotateSound),
+      placeBlock: new Audio(PlaceBlockSound),
+      rotate: new Audio(RotateSound)
     }
     sounds.rotate.volume = 0.15;
     return sounds;

@@ -2,13 +2,14 @@ import GameView from './gameView.js'
 import Game from './game.js';
 import './css/style.css';
 import './css/reset.css';
-function importAll(r) {
-  r.keys().forEach(r)
-}
+// function importAll(r) {
+//   r.keys().forEach(r)
+// }
 
 // Directory -> use Subdirectories? -> regExp
-importAll(require.context('./images/', false, /\.png$/));
-importAll(require.context('./sound/', false, /\.m4a$/));
+// importAll(require.context('./images/', false, /\.png$/));
+// importAll(require.context('./sound/', false, /\.m4a$/));
+import BGM_SRC from './sound/catris.m4a';
 
 window.addEventListener('DOMContentLoaded', event => {
   const canvas = document.getElementById('game-canvas');
@@ -19,7 +20,7 @@ window.addEventListener('DOMContentLoaded', event => {
   const nextCtx = nextCanvas.getContext('2d');
   const bgm = document.createElement('audio');
   const customEvents = createCustomEvents();
-  bgm.setAttribute('src', './sound/catris.m4a');
+  bgm.setAttribute('src', BGM_SRC);
   bgm.volume = .8;
   bgm.playbackRate = 1.5;
   const game = new Game(customEvents);

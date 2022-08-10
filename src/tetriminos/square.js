@@ -1,4 +1,5 @@
 import Tetrimino from './tetrimino';
+import CatBlockYellow from '../images/catblock-yellow.png';
 
 export default class Square extends Tetrimino {
   constructor(board) {
@@ -8,7 +9,7 @@ export default class Square extends Tetrimino {
       [1, 1],
     ];
     this.color = 'yellow';
-    this.image.src = './images/catblock-yellow.png';
+    this.image.src = CatBlockYellow;
     this.x = 4;
   }
 
