@@ -27,6 +27,7 @@ export default class GameView {
       placeBlock: new Audio('../src/sound/place-block.m4a'),
       rotate: new Audio('../src/sound/rotate.m4a')
     }
+    sounds.rotate.volume = 0.15;
     return sounds;
   }
   

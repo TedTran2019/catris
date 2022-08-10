@@ -17,8 +17,8 @@
   justify-content: space-around;
 }
 
-.hold, .game-canvas-container, .right-sidebar {
-  border: 5px solid gray;
+.hold, .game-canvas-container, .right-sidebar, .score, .controls {
+  border: 5px solid #7a79b9;
 }
 
 .modal {
@@ -86,7 +86,6 @@ h1 {
   align-items: center;
   width: 180px;
   padding: 5px;
-  border: 5px solid gray;
   border-radius: 8%;
 }
 
@@ -269,4 +268,8 @@ html {
 
 .hold > h1, .right-sidebar > h1 {
   background-color: #1e2633;
+}
+
+span, .controls > ul {
+  color: white;
 }
