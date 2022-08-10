@@ -58,8 +58,8 @@ export default class PieceManager {
     }
   }
 
-  move(customEvents) {
-    if (this.dropCount === 60 || this.hardDrop) {
+  move(customEvents, dropRate) {
+    if (this.dropCount >= dropRate || this.hardDrop) {
       if (this.hardDrop) {
         this.current.y = this.lookAhead;
         this.hardDrop = false;

@@ -18,10 +18,11 @@ export default class Game {
     this.linesHolder = document.querySelector('.lines-number');
     this.showScore();
     this.customEvents = customEvents;
+    this.dropRate = 60;
   }
 
   step() {
-    let isGameOver = this.pieceManager.move(this.customEvents);
+    let isGameOver = this.pieceManager.move(this.customEvents, this.dropRate);
     if (isGameOver) {
       window.dispatchEvent(this.customEvents.gameOver);
       return true 
@@ -45,6 +46,7 @@ export default class Game {
     this.score += Game.LINE_SCORE[lines - 1] * (this.level + 1);
     this.lines += lines;
     this.level = Math.floor(this.lines / 10);
+    this.dropRate = 60 - (this.level * 2);
     this.showScore();
   }
 
