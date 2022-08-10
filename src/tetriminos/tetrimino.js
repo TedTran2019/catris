@@ -59,7 +59,8 @@ export default class Tetrimino {
     this.shape.forEach((row, y) => {
       row.forEach((block, x) => {
         if (block) {
-          ctx.fillStyle = 'grey';
+          // ctx.fillStyle = 'grey';
+          ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
           ctx.fillRect((this.x + x) * Game.BLOCK_SIZE, (this.y + y - 20) * Game.BLOCK_SIZE, Game.BLOCK_SIZE, Game.BLOCK_SIZE);
         }
       });

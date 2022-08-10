@@ -4,21 +4,21 @@
 }
 
 .game-canvas-container {
-  height: 900px;
-  width: 450px;
+  /* height: 900px; */
+  /* width: 450px; */
 }
 
-#hold-canvas {
-  background-color: black;
-}
-
-#next-canvas {
-  background-color: black;
+#hold-canvas, #next-canvas, .score, .controls {
+  background-color: #1e2633;
 }
 
 .canvases {
   display: flex;
   justify-content: space-around;
+}
+
+.hold, .game-canvas-container, .right-sidebar {
+  border: 5px solid gray;
 }
 
 .modal {
@@ -44,6 +44,10 @@
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.right-sidebar {
+  height: 721.5px;
 }
 
 .active {
@@ -79,11 +83,11 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border:rgba(0, 0, 0, 0.5) solid 1px;
   width: 180px;
-  background-color: black;
   color: white;
   padding: 5px;
+  border: 5px solid gray;
+  border-radius: 8%;
 }
 
 .score > h1, .controls > h1 {
