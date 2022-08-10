@@ -16,7 +16,7 @@ export default class Board {
     const images = {};
     colors.forEach(color => {
       images[color] = new Image();
-      images[color].src = `../src/images/catblock-${color}.png`;
+      images[color].src = `./images/catblock-${color}.png`;
     });
     return images;
   }

@@ -9,6 +9,6 @@ export default class L extends Tetrimino {
       [0, 0, 0],
     ];
     this.color = 'orange';
-    this.image.src = '../src/images/catblock-orange.png';
+    this.image.src = './images/catblock-orange.png';
   }
 }
