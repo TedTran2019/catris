@@ -17,6 +17,10 @@
   justify-content: space-around;
 }
 
+#score {
+  color: black;
+}
+
 .hold, .game-canvas-container, .right-sidebar, .score, .controls {
   border: 5px solid #7a79b9;
 }
