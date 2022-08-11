@@ -107,7 +107,7 @@ export default class PieceManager {
     })
   }
 
-  // Fix magic numbers later
+  // !Magic Numbers
   drawNextContainer(ctx) {
     ctx.clearRect(0, 0, 180, 675);
     // for (let y = 0; y < 15; y++) {
@@ -118,6 +118,7 @@ export default class PieceManager {
     // }
   }
 
+  // !Magic Numbers
   drawHoldContainer(ctx) {
     ctx.clearRect(0, 0, 180, 180);
     // for (let y = 0; y < 4; y++) {
