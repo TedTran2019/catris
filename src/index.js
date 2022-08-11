@@ -1,7 +1,7 @@
 import GameView from './gameView.js'
 import Game from './game.js';
-import './css/style.css';
-import './css/reset.css';
+import './css/style.scss';
+import './css/reset.scss';
 // function importAll(r) {
 //   r.keys().forEach(r)
 // }

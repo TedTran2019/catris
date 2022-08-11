@@ -79,7 +79,7 @@ export default class Board {
 
   drawEmpty(ctx, x, y) {
     ctx.strokeStyle = "#633ecc";
-    ctx.globalAlpha = 0.5;
+    ctx.globalAlpha = 0.2;
     ctx.strokeRect(x, y, this.blockSize, this.blockSize);
     ctx.globalAlpha = 1;
   }
