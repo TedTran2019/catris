@@ -13,5 +13,5 @@ Tetris but with cats, happy 4th Anniversary!
 
 
 ## Made By
-- Programmed by [Ted Tran](https://www.linkedin.com/in/tedtran2019/)
 - Design by [Helen Yu](https://www.linkedin.com/in/helenyustudio/)
+- Programmed by [Ted Tran](https://www.linkedin.com/in/tedtran2019/)
