@@ -49,12 +49,17 @@ span,
   border-style: solid;
 }
 
+.hold-canvas-container, .next-canvas-container {
+  padding: 45px 0px 0px 45px;
+  background-color: $box-color;
+}
+
 .score, .controls {
   border-color: #633ecc;
 }
 
 .right-sidebar {
-  height: 718.5px;
+  height: 763.5px;
 }
 
 .tetris-title {
