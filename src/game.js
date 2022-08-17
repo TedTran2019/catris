@@ -58,10 +58,10 @@ export default class Game {
   }
 }
 
-Game.DIM_X = 450;
-Game.DIM_Y = 900;
+Game.DIM_X = 400;
+Game.DIM_Y = Game.DIM_X * 2;
 Game.ROWS = 40;
 Game.COLS = 10;
-Game.BLOCK_SIZE = 45;
+Game.BLOCK_SIZE = Game.DIM_X / Game.COLS;
 Game.MOVE_SPEED = 1;
 Game.LINE_SCORE = [40, 100, 300, 1200];

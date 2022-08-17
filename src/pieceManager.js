@@ -97,19 +97,18 @@ export default class PieceManager {
       this.current.drawLookAhead(ctx, this.lookAhead);
       this.current.draw(ctx);
     }
-    this.drawHoldContainer(holdCtx);
+    this.drawHoldContainer(holdCtx, sideBlockSize);
     if (this.hold) {
       this.hold.drawBlock(holdCtx, 0, sideBlockSize);
     }
-    this.drawNextContainer(nextCtx);
+    this.drawNextContainer(nextCtx, sideBlockSize);
     this.next.forEach((nextPiece, index) => {
       nextPiece.drawBlock(nextCtx, index, sideBlockSize);
     })
   }
 
-  // !Magic Numbers
-  drawNextContainer(ctx) {
-    ctx.clearRect(0, 0, 180, 675);
+  drawNextContainer(ctx, sideBlockSize) {
+    ctx.clearRect(0, 0, sideBlockSize * 4, sideBlockSize * 15);
     // for (let y = 0; y < 15; y++) {
     //   for (let x = 0; x < 4; x++) {
     //     ctx.strokeStyle = '#374049';
@@ -118,9 +117,8 @@ export default class PieceManager {
     // }
   }
 
-  // !Magic Numbers
-  drawHoldContainer(ctx) {
-    ctx.clearRect(0, 0, 180, 180);
+  drawHoldContainer(ctx, sideBlockSize) {
+    ctx.clearRect(0, 0, sideBlockSize * 4, sideBlockSize * 4);
     // for (let y = 0; y < 4; y++) {
     //   for (let x = 0; x < 4; x++) {
     //     ctx.strokeStyle = '#374049';

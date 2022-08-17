@@ -1,6 +1,7 @@
 $header-color: #bebcde;
 $text-color: #fef1f6;
 $box-color: #181347;
+$box-size: 40px;
 
 html {
   background-image: url('../images/cat-background.png');
@@ -31,7 +32,7 @@ span,
 
 #game-canvas {
   background-image: url('../images/game-background.png');
-  background-size: 450px 900px;
+  background-size: cover;
 }
 
 #hold-canvas, #next-canvas, .score, .controls,
@@ -39,9 +40,20 @@ span,
   background-color: $box-color;
 }
 
+.tetris-title {
+  background: url('../images/logo.png');
+  width: 250px;
+  height: 10%;
+  margin: 0 auto;
+  background-size: 250px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .canvases {
   display: flex;
   justify-content: space-around;
+  height: 90%;
 }
 
 .hold, .game-canvas-container, .right-sidebar, .score, .controls {
@@ -50,7 +62,7 @@ span,
 }
 
 .hold-canvas-container, .next-canvas-container {
-  padding: 45px 0px 0px 45px;
+  padding: $box-size 0px 0px $box-size;
   background-color: $box-color;
 }
 
@@ -58,25 +70,18 @@ span,
   border-color: #633ecc;
 }
 
-/* !Magic Number */
-.right-sidebar {
-  height: 763.5px;
-}
-
-.tetris-title {
-  background: url('../images/logo.png');
-  width: 250px;
-  height: 100px;
-  margin: 0 auto;
-  background-size: 250px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 .left-sidebar {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  row-gap: 15%;
+}
+
+.game-canvas-container {
+  align-self: center;
+}
+
+.right-sidebar {
+  align-self: flex-start;
 }
 
 .score, .controls {
